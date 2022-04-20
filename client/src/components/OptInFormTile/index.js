@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function OptInForm() {
   return (
-    <div className="bg-gray-200 flex flex-col justify-center items-center rounded shadow">
+    <div className="mb-8 bg-gray-200 flex flex-col justify-center items-center rounded shadow">
         <h1 className="pt-6 pb-4 text-2xl ">News Letter</h1>
         <p className="px-6 pb-4 text-center">Your email address will not be this published. Required fields are News Today.</p>
             <input

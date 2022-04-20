@@ -20,15 +20,15 @@ export default function SearchBar() {
     }
   return (
       
-        <div className="pb-4 w-full flex border-b">
+        <div className="w-full flex order-first md:order-last">
             <input
-            className="w-full border-2 rounded-tl-lg rounded-bl-lg appearance-none shadow py-2 px-6 text-gray-700 focus:outline-none"
+            className="w-full py-[5px] border-2 rounded-tl-lg rounded-bl-lg appearance-none shadow px-6 text-gray-700 focus:outline-none placeholder:text-sm"
             placeholder="Ask enything?"
             onChange={handleChange}
             value={searchInput}
             />
             <button onClick={handleClick} onKeyDown={onKey} className=" appearance-none rounded-tr-lg rounded-br-lg bg-green-500 px-4 py-2 text-white hover:outline-none hover:ring-2 ring-offset-2 ring-green-500 ring-opacity-60 trnaform duration-300">
-                <SearchIcon className="w-4 hover:scale-125 transform duration-300 "/>
+                <SearchIcon className=" w-4 hover:scale-125 transform duration-300 "/>
             </button>
         </div>
   )

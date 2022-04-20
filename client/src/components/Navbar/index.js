@@ -4,7 +4,7 @@ import { Disclosure, Menu } from '@headlessui/react'
 import { ChatIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import {Link} from 'react-router-dom'
 const navigation = [
-  { name: 'Blog', href: '/blog', current: true },
+  { name: 'Blog', href: '/blog', current: false },
   { name: 'Places', href: '/places', current: false },
   { name: 'Store', href: '/store', current: false },
   { name: 'Community', href: '/community', current: false },
@@ -87,6 +87,17 @@ export default function Navbar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
+            <Disclosure.Button
+                  href="/"
+                  as="a"
+                  className={classNames(
+                     'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block px-3 py-2 rounded-md text-base font-medium'
+                  )}
+                  aria-current={'page'}
+                >
+                  Home
+                </Disclosure.Button>
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
