@@ -4,8 +4,8 @@ import {ChevronRightIcon} from '@heroicons/react/outline'
 
 export default function CategoryTile() {
   return (
-    <div className="px-2 py-4 my-4 ">
-        <h2 className="text-lg pb-2 border-b uppercase mb-2">Categories</h2>
+    <div className="px-2 py-4 mt-4">
+        <h2 className="text-2xl pb-2 border-b uppercase mb-2">Categories</h2>
         <ul className="h-[350px] overflow-hidden hover:overflow-auto no-scrollbar">
             <li><CategoryWeigdet title="Category 1" slug="category-1"/></li>
             <li><CategoryWeigdet title="Category 2" slug="category-2"/></li>

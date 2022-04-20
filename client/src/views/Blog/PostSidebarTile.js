@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import SearchBar from '../../components/SearchBar'
 import { Tab } from '@headlessui/react'
 import {classNames} from "../../utilities"
 import { ImageList } from '../../assets'
@@ -85,9 +84,7 @@ export default function PostSidebar() {
       })
     
   return (
-    <div className="px-3 w-full">
-        <SearchBar/>
-        <div className="w-full px-2 py-4 my-4 sm:px-0 ">
+    <div className="w-full px-2 mt-8 lg:mt-0 sm:px-0 ">
         <Tab.Group>
           <Tab.List className="flex mb-4 space-x-1 rounded-xl">
             {Object.keys(categories).map((category) => (
@@ -114,7 +111,6 @@ export default function PostSidebar() {
               className={classNames(
                 'bg-white pt-4',
                 "max-h-[400px] overflow-hidden hover:overflow-auto no-scrollbar ",
-
               )}
             >
               <PostSidebarWeidget posts={posts}/> 
@@ -122,7 +118,6 @@ export default function PostSidebar() {
             ))}
           </Tab.Panels>
         </Tab.Group>
-    </div>
     </div>
   )
 }
