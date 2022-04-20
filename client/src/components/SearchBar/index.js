@@ -27,8 +27,8 @@ export default function SearchBar() {
             onChange={handleChange}
             value={searchInput}
             />
-            <button onClick={handleClick} onKeyDown={onKey} className=" appearance-none rounded-tr-lg rounded-br-lg bg-green-500 px-4 py-2 text-white">
-                <SearchIcon className="w-4 hover:scale-125 transform duration-300"/>
+            <button onClick={handleClick} onKeyDown={onKey} className=" appearance-none rounded-tr-lg rounded-br-lg bg-green-500 px-4 py-2 text-white hover:outline-none hover:ring-2 ring-offset-2 ring-green-500 ring-opacity-60 trnaform duration-300">
+                <SearchIcon className="w-4 hover:scale-125 transform duration-300 "/>
             </button>
         </div>
   )

@@ -2,8 +2,7 @@ import React, {useState} from 'react'
 import SearchBar from '../../components/SearchBar'
 import { Tab } from '@headlessui/react'
 import {classNames} from "../../utilities"
-import PostSidebarWeidget from "./PostSidebarWeidget"
-
+import { ImageList } from '../../assets'
 export default function PostSidebar() {
 
     let [categories] = useState({
@@ -88,15 +87,15 @@ export default function PostSidebar() {
   return (
     <div className="px-3 w-full">
         <SearchBar/>
-        <div className="w-full px-2 py-6 sm:px-0">
+        <div className="w-full px-2 py-4 my-4 sm:px-0 ">
         <Tab.Group>
-          <Tab.List className="flex mb-2  mt-4 space-x-1 rounded-xl">
+          <Tab.List className="flex mb-4 space-x-1 rounded-xl">
             {Object.keys(categories).map((category) => (
               <Tab
                 key={category}
                 className={({ selected }) =>
                   classNames(
-                    'w-full uppercase tranform duration-300 py-2 text-sm leading-5 font-medium rounded-lg shadow-lg border',
+                    'w-full  uppercase tranform duration-300 py-2 text-sm leading-5 font-medium rounded-lg shadow-lg border',
                     'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60 scale-90',
                     selected
                       ? 'bg-blue-600 text-white shadow scale-100'
@@ -114,7 +113,7 @@ export default function PostSidebar() {
               key={idx}
               className={classNames(
                 'bg-white pt-4',
-                // " h-[300px] overflow-hidden hover:overflow-auto no-scrollbar",
+                "max-h-[400px] overflow-hidden hover:overflow-auto no-scrollbar ",
 
               )}
             >
@@ -127,5 +126,35 @@ export default function PostSidebar() {
     </div>
   )
 }
+
+
+const PostSidebarWeidget = ({posts}) =>(
+    <ul >
+        {posts.map((post) => (
+            <li
+            key={post.id}
+            className="w-[95%] h-[80px] grid grid-cols-3 gap-x-2 mb-6 hover:bg-gray-100 border-b-2 hover:scale-105 transform duration-300"
+            >
+                <div className="h-full w-full overflow-hidden">
+                    <img className="h-full w-full object-cover hover:scale-110 transform duration-300" src={ImageList[Math.floor(Math.random()*3)]} alt=""/>
+                </div>
+                <div className=" col-span-2">
+                    <h3 className="relative h-[45px] text-sm font-medium leading-5 overflow-hidden">
+                        {post.title}
+                    </h3>
+                    <ul className="flex mt-1 space-x-1 text-xs font-normal leading-4 text-coolGray-500">
+                        <li>{post.date}</li>
+                        <li>&middot;</li>
+                        <li>{post.commentCount} comments</li>
+                        <li>&middot;</li>
+                        <li>{post.shareCount} shares</li>
+                    </ul>
+                </div>
+            </li>
+        ))}
+    </ul>
+  )
+
+
 
 
