@@ -5,6 +5,7 @@ import SearchBar from '../../components/SearchBar'
 import OptInFormTile from '../../components/OptInFormTile'
 import RecentPostSidebar from "./RecentPostSidebar"
 import CategoryTile from "./CategoryTile"
+import ImagePost from './ImagePost'
 
 export default function Blog() {
   return (
@@ -18,21 +19,23 @@ export default function Blog() {
           </div>
           <h2 className="text-2xl  font-bold py-1 uppercase md:order-first  mt-4">Popular Articlas</h2>
         </div> */}
-        <div className="w-full h-[600px] grid grid-cols-1 lg:grid-cols-2">
-          <div className="h-full bg-slate-400"></div>
-          <div>
-            <div className="h-[50%] bg-slate-600 grid grid-cols-2">
-              <div className="h-full bg-slate-500"></div>
-              <div className="h-full bg-slate-200"></div>
+        <div className="w-full min-h-[600px] grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div className="h-full">
+            <ImagePost/>
+          </div>
+          <div className="grid grid-rows-2 gap-2">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="h-full"><ImagePost/></div>
+              <div className="h-full"><ImagePost/></div>
             </div>
-            <div className="h-[50%] bg-slate-800 grid grid-cols-2">
-            <div className="h-full bg-slate-900"></div>
-              <div className="h-full bg-slate-300"></div>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="h-full "><ImagePost/></div>
+              <div className="h-full"><ImagePost/></div>
             </div>
           </div>
         </div>
 
-        <div  className="grid grid-cols-1 lg:grid-cols-3 gap-x-8">
+        <div  className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 my-14">
           <div className="lg:col-span-2 ">
             <PopularPosts/>
           </div> 
