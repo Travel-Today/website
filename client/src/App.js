@@ -3,7 +3,9 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Blog from "./views/Blog";
 import Places from "./views/Places";
+import Login from "./components/Login";
 import Footer from "./components/Footer"
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route exact path="/" element={<Home/>} />
         <Route exact path="blog" element={<Blog />} />
         <Route exact path="places" element={<Places />} />
+        <Route exact path="/login" element={<Login/>} />
+        <Route exact path="/signup" element={<Signup/>} />
         <Route exact path="*" element={<div className="h-screen flex justify-center items-center">ERROR</div>} />
       </Routes>
       <Footer/>
