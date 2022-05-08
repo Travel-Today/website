@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import backgroundImage from "../../assets/signupSignin.jpg";
 
 const Signup = () => {
   return (
     <div
       class="flex flex-col h-screen bg-red-100 "
       style={{
-        backgroundImage: `url("https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")`,
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: 'right top',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
       }}
     >
       <div class="bg-grey-lighter min-h-screen flex flex-col mt-8">
@@ -90,14 +94,14 @@ const Signup = () => {
             </button>
 
             <div class="text-center text-sm text-white my-4">
-              By signing up, you agree to the 
+              By signing up, you agree to the&nbsp;
               <Link
                 class="no-underline border-b border-grey-dark text-grey-dark"
                 to="#"
               >
-                 Terms of Service
+                 Terms of Service&nbsp;
               </Link>{" "}
-              and
+              and&nbsp;
               <Link
                 class="no-underline border-b border-grey-dark text-grey-dark"
                 to="#"
@@ -107,8 +111,8 @@ const Signup = () => {
             </div>
           </div>
 
-          <div class="text-grey-dark mt-6">
-            Already have an account?
+          <div class="text-white mt-6">
+            Already have an account?&nbsp;
             <Link
               class="no-underline border-b border-blue text-blue"
               to="/login"

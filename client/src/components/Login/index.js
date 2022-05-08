@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import backgroundImage from "../../assets/signupSignin.jpg";
 
 const Login = () => {
   return (
     <div
       class="flex flex-col h-screen bg-red-100 "
       style={{
-        backgroundImage: `url("https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")`,
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: 'right top',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
       }}
     >
       <div class="grid place-items-center mx-2 my-20 sm:my-auto ">
