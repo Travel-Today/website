@@ -25,7 +25,7 @@ export default function Blog() {
           </div>
           <div className="grid grid-rows-2 gap-2">
             <div className="grid grid-cols-2 gap-2">
-              <div className="h-full"><ImagePost/></div>
+              <div className="h-full "><ImagePost/></div>
               <div className="h-full"><ImagePost/></div>
             </div>
             <div className="grid grid-cols-2 gap-2">
@@ -45,9 +45,6 @@ export default function Blog() {
             <OptInFormTile/>
           </div>
         </div>
-        {/* <div>
-          <Posts/>
-        </div> */}
     </BaseContainer>
    
   )
