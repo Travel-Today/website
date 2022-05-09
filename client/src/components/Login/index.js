@@ -72,12 +72,12 @@ const Login = () => {
             </button>
 
             <div class="sm:flex sm:flex-wrap mt-8 sm:mb-4 text-sm text-center">
-              <a
-                href="forgot-password"
+              <Link
+                to="/forgetPassword"
                 class="flex-2 underline font-semibold text-base text-white opacity-60"
               >
                 Forgot password?
-              </a>
+              </Link>
 
               <p class="flex-1 text-gray-1000 text-md mx-2 my-1 sm:my-auto text-base ">
                 or
