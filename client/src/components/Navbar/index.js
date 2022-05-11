@@ -3,6 +3,10 @@ import './Navbar.scss'
 import { Disclosure, Menu } from '@headlessui/react'
 import { ChatIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import {Link} from 'react-router-dom'
+import LoginButton from "../../components/LoginLogout/LoginButton";
+import LogoutButton from "../../components/LoginLogout/LogoutButton";
+
+
 const navigation = [
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Places', href: '/places', current: false },
@@ -46,7 +50,13 @@ export default function Navbar() {
                         {item.name}
                       </Link>
                     ))}
+                    
+                    <LoginButton  />
+                    <LogoutButton />
+                   
+                    
                   </div>
+                  
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
