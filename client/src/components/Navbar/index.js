@@ -14,7 +14,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+export default function Navbar({isLogged, setLoggedIn}) {
   return (
     <Disclosure as="nav" className="bg-slate-800 bg-opacity-95 bg-clip-padding blur-backdrop-filter fixed z-10 w-full ">
       {({ open }) => (
@@ -49,39 +49,17 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <ChatIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-                <Menu as="div" className="ml-3 relative">
-                  <div>
-                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?t=st=1649959052~exp=1649959652~hmac=1032e6218e756f65ccd5a4fffa65997ff8d68f38afb1d329217192dd2db90635&w=740"
-                        alt=""
-                      />
-                    </Menu.Button>
-                  </div>
-                  <div className="transition ease-in-out" >
-                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (<a href="/"className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')} >Your Profile </a>)}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (<a href="/"className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')} >Settings </a>)}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (<a href="/"className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')} >Sign out</a>)}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </div>
-                </Menu>
-              </div>
+              
+              
+              
+              
+              
+              {ProfileMenu(isLogged, setLoggedIn)}
+              
+            
+              
+
+
             </div>
           </div>
 
@@ -117,5 +95,52 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
+  )
+}
+
+
+const ProfileMenu = (isLogged, setLoggedIn) => {
+  if(isLogged){
+    return(
+        <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button
+          type="button"
+          className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+        >
+          <span className="sr-only">View notifications</span>
+          <ChatIcon className="h-6 w-6" aria-hidden="true" />
+        </button>
+        <Menu as="div" className="ml-3 relative">
+          <div>
+            <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+              <img
+                className="h-8 w-8 rounded-full"
+                src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?t=st=1649959052~exp=1649959652~hmac=1032e6218e756f65ccd5a4fffa65997ff8d68f38afb1d329217192dd2db90635&w=740"
+                alt=""
+              />
+            </Menu.Button>
+          </div>
+          <div className="transition ease-in-out" >
+            <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Item>
+                {({ active }) => (<a href="/"className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')} >Your Profile </a>)}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (<a href="/"className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')} >Settings </a>)}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (<a href="/"className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')} >Sign out</a>)}
+              </Menu.Item>
+            </Menu.Items>
+          </div>
+        </Menu>
+      </div>
+    )           
+  }
+  return(
+    <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <a href="/login" className="py-2 px-4 uppercase text-xs text-white font-normal border border-white rounded mr-4">Sign In</a>
+        <a href="/signup" className="py-2 px-4 uppercase text-xs text-blue-900 font-bold bg-white rounded">Sign up</a>
+      </div>
   )
 }
