@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import backgroundImage from "../../assets/signupSignin.jpg";
 
-const Signup = () => {
+const Signup = ({setLoggedIn}) => {
   return (
     <div
       class="flex flex-col h-screen bg-red-100 "

@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from "../../components/Navbar";
 import PopularPosts from './PopularPosts'
 import BaseContainer from '../../components/BaseContainer'
 import SearchBar from '../../components/SearchBar'
@@ -7,8 +8,10 @@ import RecentPostSidebar from "./RecentPostSidebar"
 import CategoryTile from "./CategoryTile"
 import ImagePost from './ImagePost'
 
-export default function Blog() {
+export default function Blog({isLogged, setLoggedIn}) {
   return (
+    <>
+    <Navbar isLogged={isLogged} setLoggedIn={setLoggedIn}/>
     <BaseContainer paddingTop={24}>
         {/* <div className="mb-4 pb-4 border-b-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center lg:gap-x-12">
           <div className="w-full flex justify-end my-4 md:mb-0">
@@ -46,7 +49,7 @@ export default function Blog() {
           </div>
         </div>
     </BaseContainer>
-   
+   </>
   )
 }
 

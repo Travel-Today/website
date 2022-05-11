@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import backgroundImage from "../../assets/signupSignin.jpg";
 
-const Login = () => {
+const Login = ({setLoggedIn}) => {
   return (
     <div
       class="flex flex-col h-screen bg-red-100 "
@@ -67,6 +67,7 @@ const Login = () => {
               class="w-full py-3 mt-10 bg-gray-800 rounded-xl
                     font-medium text-white uppercase
                     focus:outline-none hover:bg-gray-700 hover:shadow-none"
+              onClick={setLoggedIn(true)}
             >
               Login
             </button>
