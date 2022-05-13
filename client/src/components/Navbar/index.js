@@ -3,6 +3,8 @@ import './Navbar.scss'
 import { Disclosure, Menu } from '@headlessui/react'
 import { ChatIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import {Link} from 'react-router-dom'
+
+
 const navigation = [
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Places', href: '/places', current: false },
@@ -46,7 +48,10 @@ export default function Navbar({isLogged, setLoggedIn}) {
                         {item.name}
                       </Link>
                     ))}
+                   
+                    
                   </div>
+                  
                 </div>
               </div>
               

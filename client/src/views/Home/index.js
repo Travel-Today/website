@@ -15,5 +15,7 @@ export default function Home({isLogged, setLoggedIn}) {
           <TopPlaces/>
         </BaseContainer>
     </>
+   
+    
   )
 }
