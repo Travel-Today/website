@@ -1,3 +1,3 @@
 # website
 Travel Today Official Website
---> [tvltdy.herokuapp.com](https://tvltdy.herokuapp.com/ "tvltdy.herokuapp.com").
+--> [tvltdy.herokuapp.com](https://traveltoday.tk "traveltoday.tk").
