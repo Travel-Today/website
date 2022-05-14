@@ -8,8 +8,8 @@ const LoginButton = () => {
   } = useAuth0();
 
 
-  return <button className="text-white" onClick={() => loginWithRedirect()}>
-      Login
+  return <button className="py-2 px-4 uppercase text-xs text-white font-normal border border-white rounded mr-4" onClick={() => loginWithRedirect()}>
+      Log In
   </button>;
 };
 
