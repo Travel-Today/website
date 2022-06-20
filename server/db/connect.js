@@ -1,8 +1,11 @@
-import mongoose from 'mongoose';
+import mysql from "mysql";
+const   connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'traveltoday'
+})
 
+connection.connect()
 
-const connectDB=(url) => {
-    return mongoose.connect(url);
-}
-
-export default connectDB;
+export  default connection;
