@@ -6,7 +6,7 @@ userRouter.use((req,res,next)=>{
     next();
 });
 
-userRouter.route('/name')
+userRouter.route('/')
     .get((req,res)=>{
         res.status(200).send("User inserted");
     });

@@ -1,11 +1,11 @@
-import mysql from "mysql";
-const   connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'traveltoday'
-})
+// import mysql from "mysql";
+// const   connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'traveltoday'
+// })
 
-connection.connect()
+// connection.connect()
 
-export  default connection;
+// export  default connection;

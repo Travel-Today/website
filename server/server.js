@@ -1,5 +1,5 @@
 import express from "express";
-import connection from "./db/connect.js"
+// import connection from "./db/connect.js"
 import {userRouter} from "./routes/users.js"
 import {blogsRouter} from "./routes/blogs.js";
 const PORT = process.env.PORT || 5000;

@@ -1,4 +1,4 @@
-import connection from "../db/connect.js";
+// import connection from "../db/connect.js";
 import {getAllBlogs,getBlog} from "../queries/blogsQueries.js";
 import { PrismaClient } from '@prisma/client'
 
