@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
      <div className="overlay">
-            <h1 className="title">welcomeeee <span>to</span> <span>sri lanka</span></h1>
+            <h1 className="title">welcomeeeeee <span>to</span> <span>sri lanka</span></h1>
             <h5 className="subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ultrices sem, eget condimentum erat. Praesent vitae neque lacus.
             </h5>
